@@ -28,7 +28,11 @@
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                    <a href="#" class="login_btn">Login</a>
+                    @if(Auth::guest())
+                    <a href="{{url('/login')}}" class="login_btn">Login</a>
+                    @else
+                    <a href="/home" class="login_btn">{{Auth::user()->name}}</a>
+                    @endif
                 </nav>
             </div>
         </header><!--  end header section  -->
