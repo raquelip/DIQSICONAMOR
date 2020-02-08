@@ -9,7 +9,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-
+use App\Producto;
+use App\Categoria;
 /**
  * Class HomeController
  * @package App\Http\Controllers
@@ -33,6 +34,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('adminlte::home');
+        $produ=Producto::WhereIn('categorias_id',[1])->get();
+        return view('adminlte::Welcome',compact('produ'));
+    }
+    public function mostrar($cat_id){
+        $produ=Producto::WhereIn('categorias_id',[2])->get();
+        return view('adminlte::Welcome',compact('produ'));
     }
 }

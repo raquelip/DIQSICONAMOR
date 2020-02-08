@@ -22,7 +22,7 @@
                 <a href="#" class="hamburger"></a>
                 <nav>
                     <ul>
-                        <li><a href="#">Buy</a></li>
+                        <li><a href="{{ url('otra',[2])}}">Buy</a></li>
                         <li><a href="#">Rent</a></li>
                         <li><a href="#">Sell</a></li>
                         <li><a href="#">About</a></li>
@@ -82,114 +82,20 @@
     <section class="listings">
         <div class="wrapper">
             <ul class="properties_list">
+                @foreach($produ as $pro)
                 <li>
                     <a href="#">
                         <img src="imgh/property_1.jpg" alt="" title="" class="property_img"/>
                     </a>
-                    <span class="price">$2500</span>
+                    <span class="price">{{$pro->Precio}}</span>
                     <div class="property_details">
                         <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
+                            <a href="#">{{$pro->Nomproducto}}</a>
                         </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
+                        <p>{{$pro->Descripcion}}</p>
                     </div>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_2.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$1000</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_3.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$500</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_1.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$2500</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_2.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$1000</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_3.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$500</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_1.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$2500</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_2.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$1000</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="imgh/property_3.jpg" alt="" title="" class="property_img"/>
-                    </a>
-                    <span class="price">$500</span>
-                    <div class="property_details">
-                        <h1>
-                            <a href="#">Fuisque dictum tortor at purus libero</a>
-                        </h1>
-                        <h2>2 kitchens, 2 bed, 2 bath... <span class="property_size">(288ftsq)</span></h2>
-                    </div>
-                </li>
+                @endforeach
             </ul>
             <div class="more_listing">
                 <a href="#" class="more_listing_btn">View More Listings</a>
