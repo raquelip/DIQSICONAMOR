@@ -26,11 +26,35 @@
               </div>
               <!-- /.box-body -->
               <div class="box-footer">
-                <button type="submit" class="btn btn-default">Cancelar</button>
                 <button type="submit" class="btn btn-info pull-right">Registrar</button>
               </div>
               <!-- /.box-footer -->
             </form>
           </div>	
+           <div class="box-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Categoria de Productos</th>
+                   <th>Opciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($datos as $item)
+                <tr>
+                    <td>{{$item->id}}</td>
+                    <td>{{$item->Nombre}}</td>
+                    <td>
+                      <a href="{{url('editarcat',$item->id) }}"><button type="button" class="btn btn-warning"><i class="fa  fa-pencil"></i></button></a>
+                      
+                      <button type="button" class="btn btn-danger"><i class="fa  fa-trash"></i></button>
+                       <a href="{{url('eliminarcat',$item->id) }}"></a>
+    
+                    </td>
+                    @endforeach
+            </tbody>   
+        </table>
+    </div>
 	</div>
 @endsection
