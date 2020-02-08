@@ -14,7 +14,7 @@ class CategoriaController extends Controller
     	$cate=new Categoria();
     	$cate->Nombre=$request->nombre;
     	$cate->save();
-    	return redirect()->action('ProductoController@index');
+    	return redirect()->action('CategoriaController@index');
     }
     public function editar($id){
     	$datos=Categoria::find($id);
@@ -24,12 +24,12 @@ class CategoriaController extends Controller
     	$cate=new Categoria::find($id);
     	$cate->Nombre=$request->nombre;
     	$cate->save();
-     	return redirect()->action('ProductoController@index');
+     	return redirect()->action('CategoriaController@index');
     }
     public function eliminar($id){
     	$cate=new Categoria::find($id);
     	$cate->delete();
-    	return redirect()->action('ProductoController@index');
+    	return redirect()->action('CategoriaController@index');
     }
 
 }
