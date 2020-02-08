@@ -13,13 +13,14 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post" action="{{ url('categoria') }}">
+               @csrf
               <div class="box-body">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Nombre</label>
 
                   <div class="col-sm-10">
-                    <input type="text" class="form-control" id="nombrecategoria" placeholder="categoria">
+                    <input type="text" class="form-control" id="nombrecategoria" placeholder="categoria" name="nombre">
                   </div>
                 </div>
               </div>

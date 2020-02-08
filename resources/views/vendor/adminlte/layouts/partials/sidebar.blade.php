@@ -34,7 +34,7 @@
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
             <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>Home</span></a></li>
-            <li><a href="{{ url('categoria') }}"><i class='fa fa-link'></i> <span>Categorias</span></a></li>
+            <li><a href="{{ url('ingrecategoria') }}"><i class='fa fa-link'></i> <span>Categorias</span></a></li>
             <li class="treeview">
                 <a href="#"><i class='fa fa-link'></i> <span>Productos</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">

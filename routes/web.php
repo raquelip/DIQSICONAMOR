@@ -14,12 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('ingrpro','CategoriaController@index');
-Route::post('productos','CategoriaController@ingresar');
-Route::get('editarpro/{id}','CategoriaController@editar');
-Route::post('actualizarpro/{id}','CategoriaController@actualizar');
-Route::get('eliminarpro/{id}','CategoriaController@eliminar');
-Route::get('categoria','CategoriaController@ingresar');
+Route::get('ingrecategoria','CategoriaController@index');
+Route::post('categoria','CategoriaController@ingresar');
+Route::get('editarcategoria/{id}','CategoriaController@editar');
+Route::post('actualizarcat/{id}','CategoriaController@actualizar');
+Route::get('eliminarcat/{id}','CategoriaController@eliminar');
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
 //        // Uses Auth Middleware
