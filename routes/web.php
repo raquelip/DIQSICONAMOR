@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Route::get('ingrecategoria','CategoriaController@index');
 Route::post('categoria','CategoriaController@ingresar');
-Route::get('editarcategoria/{id}','CategoriaController@editar');
+Route::get('editarcat/{id}','CategoriaController@editar');
 Route::post('actualizarcat/{id}','CategoriaController@actualizar');
 Route::get('eliminarcat/{id}','CategoriaController@eliminar');
 Route::group(['middleware' => 'auth'], function () {

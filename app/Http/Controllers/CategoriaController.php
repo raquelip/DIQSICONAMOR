@@ -18,7 +18,7 @@ class CategoriaController extends Controller
     }
     public function editar($id){
     	$datos=Categoria::find($id);
-    	return view('adnminlte::editarcategoria',compact('datos'));
+    	return view('adminlte::editarcategoria',compact('datos'));
     }
     public function actualizar(Request $request,$id){
     	$cate=Categoria::find($id);
