@@ -13,17 +13,18 @@ class ProductoController extends Controller
     	return view ('adminlte::productos',compact('cate','produ'));
     }
     public function ingresar(Request $request){
-    	$produc=new Producto();
-    	$produc->Nomproducto=$request->nombre;
-    	$produc->Precio=$request->precio;
-    	$produc->Descripcion=$request->descripcion;
-    	$produc->categorias_id=$request->categorias_id;
-        $file=$request->file('Imagen');
+    
+        $file=$request->file('imagen');
         $nombre=$file->getClientMimetype();
         $tipoImagen=str_replace('image/','.',$nombre);
         $filename=uniqid() .$tipoImagen;
         $path=public_path().'/img';
         $file->move($path,$filename);
+        $produc=new Producto();
+        $produc->Nomproducto=$request->nombre;
+        $produc->Precio=$request->precio;
+        $produc->Descripcion=$request->descripcion;
+        $produc->categorias_id=$request->categorias_id;
         $produc->Imagen=$filename;
         $produc->save();
         return redirect()->action('ProductoController@index');
@@ -31,16 +32,15 @@ class ProductoController extends Controller
     public function editar($id){
         $cate=Categoria::all();
         $produc=Producto::with('categoria')->find($id);
-        return view ('adminlte::editarproductos',compact('cate','produ'));
+        return view ('adminlte::editarproductos',compact('cate','produc'));
     }
     public function actualizar(Request $request,$id){
         $produc=Producto::find($id);
-        $produc=new Producto();
         $produc->Nomproducto=$request->nombre;
         $produc->Precio=$request->precio;
         $produc->Descripcion=$request->descripcion;
         $produc->categorias_id=$request->categorias_id;
-        $file=$request->file('Imagen');
+        $file=$request->file('imagen');
         $nombre=$file->getClientMimetype();
         $tipoImagen=str_replace('image/','.',$nombre);
         $filename=uniqid() .$tipoImagen;

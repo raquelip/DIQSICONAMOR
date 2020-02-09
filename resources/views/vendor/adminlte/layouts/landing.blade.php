@@ -22,7 +22,7 @@
                 <a href="#" class="hamburger"></a>
                 <nav>
                     <ul>
-                        <li><a href="{{ url('otra',[2])}}">Buy</a></li>
+                        <li><a href="{{ url('otra',[5])}}">Buy</a></li>
                         <li><a href="#">Rent</a></li>
                         <li><a href="#">Sell</a></li>
                         <li><a href="#">About</a></li>
@@ -85,12 +85,12 @@
                 @foreach($produ as $pro)
                 <li>
                     <a href="#">
-                        <img src="imgh/property_1.jpg" alt="" title="" class="property_img"/>
+                        <img src="{{$pro->Imagen}}" alt="" title="" class="property_img"/>
                     </a>
                     <span class="price">{{$pro->Precio}}</span>
                     <div class="property_details">
                         <h1>
-                            <a href="#">{{$pro->Nomproducto}}</a>
+                            <p>{{$pro->Nomproducto}}</p>
                         </h1>
                         <p>{{$pro->Descripcion}}</p>
                     </div>

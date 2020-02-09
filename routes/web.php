@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('Principal','HomeController@index');
 Route::get('home','HomeController@and');
 Route::get('/','HomeController@index');
 Route::get('otra/{id}','HomeController@mostrar');
@@ -23,9 +24,9 @@ Route::get('eliminarcat/{id}','CategoriaController@eliminar');
 
 Route::get('ingreproducto','ProductoController@index');
 Route::post('productos','ProductoController@ingresar');
-Route::get('editarproducto','ProductoController@editar');
-Route::post('actualizarproducto','ProductoController@actualizar');
-Route::get('eliminarproduct','ProductoController@eliminar');
+Route::get('editarproducto/{id}','ProductoController@editar');
+Route::post('actualizarproducto/{id}','ProductoController@actualizar');
+Route::get('eliminarproduct/{id}','ProductoController@eliminar');
 
 Route::group(['middleware' => 'auth'], function () {
     //    Route::get('/link1', function ()    {
