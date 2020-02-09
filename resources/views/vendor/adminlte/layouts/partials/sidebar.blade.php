@@ -19,29 +19,17 @@
         @endif
 
         <!-- search form (Optional) -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="{{ trans('adminlte_lang::message.search') }}..."/>
-              <span class="input-group-btn">
-                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-        </form>
+       
         <!-- /.search form -->
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <li class="header">{{ trans('adminlte_lang::message.header') }}</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-link'></i> <span>Home</span></a></li>
-            <li><a href="{{ url('ingrecategoria') }}"><i class='fa fa-link'></i> <span>Categorias</span></a></li>
-            <li class="treeview">
-                <a href="#"><i class='fa fa-link'></i> <span>Productos</span> <i class="fa fa-angle-left pull-right"></i></a>
-                <ul class="treeview-menu">
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
-                    <li><a href="#">{{ trans('adminlte_lang::message.linklevel2') }}</a></li>
-                </ul>
-            </li>
+            <li class="active"><a href="{{ url('home') }}"><i class='fa fa-institution'></i> <span>Home</span></a></li>
+            <li><a href="{{ url('ingrecategoria') }}"><i class='fa fa-calendar-o'></i> <span>Categorias</span></a></li>
+            <li><a href="{{ url('ingreproducto') }}"><i class='fa  fa-cart-arrow-down'></i> <span>Productos</span></a></li>
+            <li class="active"><a href="{{ url('Principal') }}"><i class='fa  fa-arrows-alt'></i> <span>Salir</span></a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

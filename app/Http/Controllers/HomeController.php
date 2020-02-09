@@ -38,11 +38,12 @@ class HomeController extends Controller
         return view('adminlte::welcome',compact('produ'));
     }
     public function mostrar($cat_id){
-        $produ=Producto::WhereIn('categorias_id',[2])->get();
+        $produ=Producto::WhereIn('categorias_id',[5])->get();
         return view('adminlte::welcome',compact('produ'));
     }
     public function and()
     {
         return view('adminlte::home');
     }
+    
 }

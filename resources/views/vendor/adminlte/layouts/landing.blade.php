@@ -22,11 +22,19 @@
                 <a href="#" class="hamburger"></a>
                 <nav>
                     <ul>
+<<<<<<< HEAD
                         <li><a href="{{ url('otra',[2])}}">Productos</a></li>
                         <li><a href="#">Aniversario</a></li>
                         <li><a href="#">Cumpleaños</a></li>
                         <li><a href="#">Flores</a></li>
                         <li><a href="#">Personalizados</a></li>
+=======
+                        <li><a href="{{ url('otra',[5])}}">Buy</a></li>
+                        <li><a href="#">Rent</a></li>
+                        <li><a href="#">Sell</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+>>>>>>> 380e4b12bb6b75ed5d950cba2509cf0074e6740d
                     </ul>
                     @if(Auth::guest())
                     <a href="{{url('/login')}}" class="login_btn">Login</a>
@@ -85,12 +93,12 @@
                 @foreach($produ as $pro)
                 <li>
                     <a href="#">
-                        <img src="imgh/property_1.jpg" alt="" title="" class="property_img"/>
+                        <img src="{{$pro->Imagen}}" alt="" title="" class="property_img"/>
                     </a>
                     <span class="price">{{$pro->Precio}}</span>
                     <div class="property_details">
                         <h1>
-                            <a href="#">{{$pro->Nomproducto}}</a>
+                            <p>{{$pro->Nomproducto}}</p>
                         </h1>
                         <p>{{$pro->Descripcion}}</p>
                     </div>
