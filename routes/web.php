@@ -11,7 +11,7 @@
 |
 */
 
-
+Route::get('home','HomeController@and');
 Route::get('/','HomeController@index');
 Route::get('otra/{id}','HomeController@mostrar');
 

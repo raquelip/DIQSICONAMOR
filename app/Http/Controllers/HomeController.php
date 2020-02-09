@@ -35,10 +35,14 @@ class HomeController extends Controller
     public function index()
     {
         $produ=Producto::WhereIn('categorias_id',[1])->get();
-        return view('adminlte::Welcome',compact('produ'));
+        return view('adminlte::welcome',compact('produ'));
     }
     public function mostrar($cat_id){
         $produ=Producto::WhereIn('categorias_id',[2])->get();
-        return view('adminlte::Welcome',compact('produ'));
+        return view('adminlte::welcome',compact('produ'));
+    }
+    public function and()
+    {
+        return view('adminlte::home');
     }
 }
