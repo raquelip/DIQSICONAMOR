@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>La Casa - Real Estate HTML5 Home Page Template</title>
+    <title>DIQ'SI</title>
     <meta charset="utf-8">
     <meta name="author" content="pixelhint.com">
     <meta name="description" content="La casa free real state fully responsive html5/css3 home page website template"/>
@@ -22,24 +22,24 @@
                 <a href="#" class="hamburger"></a>
                 <nav>
                     <ul>
-                        <li><a href="{{ url('otra',[2])}}">Buy</a></li>
-                        <li><a href="#">Rent</a></li>
-                        <li><a href="#">Sell</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ url('otra',[2])}}">Productos</a></li>
+                        <li><a href="#">Aniversario</a></li>
+                        <li><a href="#">Cumpleaños</a></li>
+                        <li><a href="#">Flores</a></li>
+                        <li><a href="#">Personalizados</a></li>
                     </ul>
                     @if(Auth::guest())
                     <a href="{{url('/login')}}" class="login_btn">Login</a>
                     @else
-                    <a href="/home" class="login_btn">{{Auth::user()->name}}</a>
+                    <a href="/" class="login_btn">{{Auth::user()->name}}</a>
                     @endif
                 </nav>
             </div>
         </header><!--  end header section  -->
 
             <section class="caption">
-                <h2 class="caption">Find You Dream Home</h2>
-                <h3 class="properties">Appartements - Houses - Mansions</h3>
+                <h2 class="caption">DIQ'SI</h2>
+                <h3 class="properties">....con amor</h3>
             </section>
     </section><!--  end hero section  -->
 
@@ -106,43 +106,14 @@
     <footer>
         <div class="wrapper footer">
             <ul>
-                <li class="links">
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Policy</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </li>
-
-                <li class="links">
-                    <ul>
-                        <li><a href="#">Appartements</a></li>
-                        <li><a href="#">Houses</a></li>
-                        <li><a href="#">Villas</a></li>
-                        <li><a href="#">Mansions</a></li>
-                        <li><a href="#">...</a></li>
-                    </ul>
-                </li>
-
-                <li class="links">
-                    <ul>
-                        <li><a href="#">New York</a></li>
-                        <li><a href="#">Los Anglos</a></li>
-                        <li><a href="#">Miami</a></li>
-                        <li><a href="#">Washington</a></li>
-                        <li><a href="#">...</a></li>
-                    </ul>
-                </li>
 
                 <li class="about">
-                    <p>La Casa is real estate minimal html5 website template, designed and coded by pixelhint, tellus varius, dictum erat vel, maximus tellus. Sed vitae auctor ipsum</p>
+                    <p >Somos una marca de regalos que con mucha ilusión busca recordarte lo mágicos que somos con pequeños detalles. Creamos y diseñamos cada uno de los regalos con mucho cariño y nos emociona muchísimo poder ayudarte a encontrar el detalle perfecto para esas personas especiales que quieres tanto.</p>
+                    <p>¡Gracias por permitirnos ser parte de tus momentos más importantes!</p>
                     <ul>
-                        <li><a href="http://facebook.com/pixelhint" class="facebook" target="_blank"></a></li>
-                        <li><a href="http://twitter.com/pixelhint" class="twitter" target="_blank"></a></li>
-                        <li><a href="http://plus.google.com/+Pixelhint" class="google" target="_blank"></a></li>
-                        <li><a href="#" class="skype"></a></li>
+                        <li><a href="https://www.facebook.com/diq.si.9?epa=SEARCH_BOX" class="facebook" target="_blank"></a></li>
+                      
+                        <li><a href="https://www.instagram.com/diqsiklz/?fbclid=IwAR0ibWFjONmJYcVztXg_71TfZSnQh8mLX3Wwo4FEAAH3mrAQZ5ER3VTj6kI" class="instagram" target="_blank"></a></li>
                     </ul>
                 </li>
             </ul>

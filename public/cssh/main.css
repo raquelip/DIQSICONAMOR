@@ -199,7 +199,7 @@ header nav .login_btn:hover{
     width: 100%;
     height: 800px;
     position: relative;
-    background: url('../imgh/hero.jpg') no-repeat bottom center;
+    background: url('../imgh/portada.jpg') no-repeat bottom center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
